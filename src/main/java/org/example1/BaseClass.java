@@ -107,16 +107,16 @@ public class BaseClass {
         sheet = wb.getSheet(sheetName);
         No_of_veggies_to_be_added_to_cart = sheet.getPhysicalNumberOfRows()-1;
         noOfCells = row.getPhysicalNumberOfCells();
-        System.out.println(No_of_veggies_to_be_added_to_cart);
+        System.out.println("Number of veetable to be added to cart : "+No_of_veggies_to_be_added_to_cart);
         for(int i=0;i<No_of_veggies_to_be_added_to_cart;i++){
             row = sheet.getRow(i+1);
             cell = row.getCell(0);
             veggieName = cell.getStringCellValue();
-            System.out.println(veggieName);
+            //System.out.println(veggieName);
 
             if(!(veggies_to_be_added_to_cart).contains(veggieName)) {
                 veggies_to_be_added_to_cart.add(veggieName);
-                System.out.println(veggies_to_be_added_to_cart.get(i));
+                //System.out.println(veggies_to_be_added_to_cart.get(i));
 
                 cell = row.getCell(1);
                 veggieCount = (int) cell.getNumericCellValue();
@@ -134,16 +134,17 @@ public class BaseClass {
 
             System.out.println(veggieName+" count of veggies "+veggieCount);
             for(int j=0;j<veggieCount-1;j++){
-                System.out.println("itr "+veggieName);
+                //System.out.println("Iteration for  "+veggieName);
                 incrementQty();
             }
             vegetables(veggieName);
 
         }
-        System.out.println("total="+totalExpectedAmt);
+        System.out.println("total overall amount ="+totalExpectedAmt);
         System.out.println("veggies_to_be_added_to_cart = "+veggies_to_be_added_to_cart);
 
     }
+
 
     public static void captureScreenshots() throws IOException {
 
