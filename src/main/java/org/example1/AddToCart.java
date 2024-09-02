@@ -47,7 +47,7 @@ public class AddToCart extends BaseClass{
 
     public static void incrementQty() throws IOException {
         increment = veggie+"/following-sibling::div/a[@class='increment']";
-        System.out.println("Inside increment for "+veggieName);
+        //System.out.println("Inside increment for "+veggieName);
         addVeggiesToCart(increment);
     }
 
