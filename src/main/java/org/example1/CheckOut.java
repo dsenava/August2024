@@ -49,6 +49,12 @@ public class CheckOut extends BaseClass{
             String msg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(finalmsg))).getText();
             System.out.println(msg);
         }*/
+         String currentURL2 = driver.getCurrentUrl();
+        if(currentURL1.equalsIgnoreCase(currentURL2)){
+            System.out.println("------Successful placement of order-------");
+        }else {
+            System.out.println("-------Unsuccesfull order placement------");
+        }
 
     }
 }
